@@ -7,7 +7,7 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /go-api ./cmd
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /go-api ./cmd
 
 FROM alpine:latest
 
