@@ -26,11 +26,11 @@ func loadHealthRoutes(router *http.ServeMux){
 }
 
 func loadExerciceRoutes(router *http.ServeMux){
-	exercices := handlers.Exercice{}
+	exercice := handlers.Exercice{}
 
-	router.HandleFunc("POST /countCharFrequency", exercices.CountFrequencyHandler)
-	router.HandleFunc("POST /isTruthy", exercices.IsTruthyHandler)
-	router.HandleFunc("POST /isStudentOf", exercices.IsStudentOfHandler)
-	router.HandleFunc("POST /generateEvenIntList", exercices.GenerateEvenIntListHandler)
-	router.HandleFunc("POST /parseInt", exercices.ParseIntHandler)
+	router.HandleFunc("POST /countCharFrequency", exercice.CountFrequencyHandler)
+	router.HandleFunc("POST /isTruthy", exercice.IsTruthyHandler)
+	router.HandleFunc("POST /isStudentOf", exercice.IsStudentOfHandler)
+	router.HandleFunc("POST /generateEvenIntList", exercice.GenerateEvenIntListHandler)
+	router.HandleFunc("POST /parseInt", exercice.ParseIntHandler)
 }

@@ -24,7 +24,6 @@ func (e *Exercice) CountFrequencyHandler(w http.ResponseWriter, r *http.Request)
 
 // -> 
 func (e *Exercice) IsStudentOfHandler(w http.ResponseWriter, r *http.Request) {
-
 	var input struct {
 		Obj     f.ObjArg `json:"obj"`
 		College string `json:"college"`
