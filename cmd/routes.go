@@ -24,4 +24,5 @@ func loadExerciceRoutes(router *http.ServeMux){
 	router.HandleFunc("POST /is-student-of", exercice.IsStudentOfHandler)
 	router.HandleFunc("POST /generate-even-int-list", exercice.GenerateEvenIntListHandler)
 	router.HandleFunc("POST /parse-int", exercice.ParseIntHandler)
+	router.HandleFunc("POST /was-student-during", exercice.WasStudentDuringHandler)
 }
