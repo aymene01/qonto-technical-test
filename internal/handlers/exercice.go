@@ -87,3 +87,21 @@ func (e *Exercice) ParseIntHandler(w http.ResponseWriter, r *http.Request) {
 	response := map[string]int{"result": result}
 	utils.RespondJSON(w, http.StatusOK, response)
 }
+
+func (e *Exercice) WasStudentDuringHandler(w http.ResponseWriter, r *http.Request) {
+	var input struct {
+		Student f.Student `json:"student"`
+		College string `json:"college"`
+		StartYear int `json:"startYear"`
+		EndYear int `json:"endYear"`
+	}
+
+	if err := json.NewDecoder(r.Body).Decode(&input); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	result := f.WasStudentDuring(input.Student, input.College, input.StartYear, input.EndYear)
+	response := map[string]bool{"result": result}
+	utils.RespondJSON(w, http.StatusOK, response)
+}
