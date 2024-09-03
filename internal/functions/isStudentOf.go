@@ -1,10 +1,10 @@
 package functions
 
-type ObjArg struct {
+type Student struct {
 	College string
 	Year    int
 }
 
-func IsStudentOf(obj ObjArg, college string) bool {
-	return obj.College == college
+func IsStudentOf(student Student, college string) bool {
+	return student.College == college
 }

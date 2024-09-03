@@ -25,7 +25,7 @@ func (e *Exercice) CountFrequencyHandler(w http.ResponseWriter, r *http.Request)
 // -> 
 func (e *Exercice) IsStudentOfHandler(w http.ResponseWriter, r *http.Request) {
 	var input struct {
-		Obj     f.ObjArg `json:"obj"`
+		Student     f.Student `json:"obj"`
 		College string `json:"college"`
 	}
 	if err := json.NewDecoder(r.Body).Decode(&input); err != nil {
@@ -33,7 +33,7 @@ func (e *Exercice) IsStudentOfHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	result := f.IsStudentOf(input.Obj, input.College)
+	result := f.IsStudentOf(input.Student, input.College)
 	response := map[string]bool{"result": result}
 	utils.RespondJSON(w, http.StatusOK, response)
 }
