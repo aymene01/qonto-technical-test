@@ -15,7 +15,7 @@ func (h *Health) GetHealthStatus(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	response := HealthResponse{
-		Status: "up and running",
+		Status: "OK",
 	}
 
 	if err := json.NewEncoder(w).Encode(response); err != nil {

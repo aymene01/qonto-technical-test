@@ -41,11 +41,181 @@ This project includes:
 **Description:** Checks the health status of the service.
 
 **Response:**
+
 ```json
 {
   "status": "OK"
 }
 ```
+
+**curl:**
+
+```bash
+curl -X GET https://qonto-technical-test.fly.dev/health
+```
+
+**Endpoint:** `POST /count-frequency`
+
+**Description:** Counts how many times each item occurs in a list.
+**Request:**
+
+```json
+{
+  "data": ["apple", "banana", "apple", "banana", "orange", "apple"]
+}
+```
+
+**Response:**
+
+```json
+{
+  "apple": 3,
+  "banana": 2,
+  "orange": 1
+}
+```
+
+**curl:**
+
+```bash
+curl -X POST https://qonto-technical-test.fly.dev/count-frequency -H "Content-Type: application/json" -d '["egg", "egg", "soap", "soap", "soap"]'
+```
+
+**Endpoint:** `POST /is-truthy`
+
+**Description:** Determines if any of its arguments is true
+**Request:**
+
+```json
+{
+  "data": [true, false, false]
+}
+```
+
+**Response:**
+
+```json
+{
+  "result": true
+}
+```
+
+**curl:**
+
+```bash
+curl -X POST https://qonto-technical-test.fly.dev/is-truthy -H "Content-Type: application/json" -d '[true, false]'
+```
+
+**Endpoint:** `POST /is-student-of`
+**Description:** Returns true if a student attended a specified college.
+
+**Request:**
+
+```json
+{
+  "obj": {
+    "college": "cambridge",
+    "year": 2008
+  },
+  "college": "cambridge"
+}
+```
+
+**Response:**
+
+```json
+{
+  "result": true
+}
+```
+
+**curl:**
+
+```bash
+curl -X POST https://qonto-technical-test.fly.dev/is-student-of -H "Content-Type: application/json" -d '{"obj": {"college": "cambridge", "year": 2008}, "college": "cambridge"}'
+```
+
+**Endpoint:** `POST /generate-even-int-list`
+**Description:** Generates a list of even integers from 0 to n inclusive.
+
+**Request:**
+
+```json
+{
+  "n": 10
+}
+```
+
+**Response:**
+
+```json
+{
+  "result": [0, 2, 4, 6, 8, 10]
+}
+```
+
+**curl:**
+
+```bash
+curl -X POST https://qonto-technical-test.fly.dev/generate-even-int-list -H "Content-Type: application/json" -d '{"n": 7}'
+```
+
+**Endpoint:** `POST /parse-int`
+**Description:** Parses an integer from a string.
+
+**Request:**
+
+```json
+{
+  "value": "10"
+}
+```
+
+**Response:**
+
+```json
+{
+  "result": 10
+}
+```
+
+**curl:**
+
+```bash
+curl -X POST https://qonto-technical-test.fly.dev/parse-int -H "Content-Type: application/json" -d '{"value": "10"}'
+```
+
+**Endpoint:** `POST /was-student-during`
+**Description:** Determines if a student was attending college during a specific year.
+
+**Request:**
+
+```json
+{
+  "student": {
+    "college": "cambridge",
+    "year": 2004
+  },
+  "college": "cambridge",
+  "startYear": 2002,
+  "endYear": 2006
+}
+```
+
+**Response:**
+
+```json
+{
+  "result": true
+}
+```
+
+**curl:**
+
+```bash
+curl -X POST https://qonto-technical-test.fly.dev/was-student-during -H "Content-Type: application/json" -d '{"student": {"college": "cambridge", "year": 2004}, "college": "cambridge", "startYear": 2002, "endYear": 2006}'
+```
+
 ## 👤 Author
 
 **Aymene Bousbia**
@@ -53,6 +223,8 @@ This project includes:
 - 🔍 Explore: [GitHub Profile](https://github.com/aymene01)
 - 💬 Ask me about anything [here](https://github.com/aymene01/nestjs-final-test/issues).
 
-# 📬 Feedback 
+# 📬 Feedback
+
 Your opinions and feedback are what shape the future; let's craft it beautifully together. Share your thoughts in the issues or through discourse.
-<!-- Your personal message or trademark --> <div align="center"> <sub>Built with ❤️ by <a href="https://github.com/aymene01">Aymene Bousbia</a></sub> </div> 
+
+<!-- Your personal message or trademark --> <div align="center"> <sub>Built with ❤️ by <a href="https://github.com/aymene01">Aymene Bousbia</a></sub> </div>
