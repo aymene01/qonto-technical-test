@@ -253,7 +253,7 @@ For a detailed breakdown of the DoSomething function, including its operations a
 **Aymene Bousbia**
 
 - 🔍 Explore: [GitHub Profile](https://github.com/aymene01)
-- 💬 Ask me about anything [here](https://github.com/aymene01/nestjs-final-test/issues).
+- 💬 Ask me about anything [here](https://github.com/aymene01/qonto-technical-test/issues).
 
 # 📬 Feedback
 
