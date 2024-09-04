@@ -11,7 +11,7 @@ BUILD_DIR=bin
 all: build
 build:
 	@mkdir -p $(BUILD_DIR)
-	@$(GOBUILD) -o $(BUILD_DIR)/$(BINARY_NAME) -v cmd/
+	@$(GOBUILD) -o $(BUILD_DIR)/$(BINARY_NAME) -v cmd/main.go cmd/routes.go
 
 clean:
 	@$(GOCLEAN)
