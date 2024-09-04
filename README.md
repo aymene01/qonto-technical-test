@@ -55,7 +55,7 @@ This project includes:
 }
 ```
 
-**exemple:**
+**example:**
 
 ```bash
 curl -X GET https://qonto-technical-test.fly.dev/health
@@ -88,7 +88,7 @@ The application exposes the following functions:
 }
 ```
 
-**curl:**
+**example:**
 
 ```bash
 curl -X POST https://qonto-technical-test.fly.dev/count-frequency -H "Content-Type: application/json" -d '["egg", "egg", "soap", "soap", "soap"]'
@@ -116,7 +116,7 @@ curl -X POST https://qonto-technical-test.fly.dev/count-frequency -H "Content-Ty
 }
 ```
 
-**curl:**
+**example:**
 
 ```bash
 curl -X POST https://qonto-technical-test.fly.dev/is-truthy -H "Content-Type: application/json" -d '[true, false]'
@@ -148,7 +148,7 @@ curl -X POST https://qonto-technical-test.fly.dev/is-truthy -H "Content-Type: ap
 }
 ```
 
-**curl:**
+**example:**
 
 ```bash
 curl -X POST https://qonto-technical-test.fly.dev/is-student-of -H "Content-Type: application/json" -d '{"obj": {"college": "cambridge", "year": 2008}, "college": "cambridge"}'
@@ -176,7 +176,7 @@ curl -X POST https://qonto-technical-test.fly.dev/is-student-of -H "Content-Type
 }
 ```
 
-**curl:**
+**example:**
 
 ```bash
 curl -X POST https://qonto-technical-test.fly.dev/generate-even-int-list -H "Content-Type: application/json" -d '{"n": 7}'
@@ -204,7 +204,7 @@ curl -X POST https://qonto-technical-test.fly.dev/generate-even-int-list -H "Con
 }
 ```
 
-**curl:**
+**example:**
 
 ```bash
 curl -X POST https://qonto-technical-test.fly.dev/parse-int -H "Content-Type: application/json" -d '{"value": "10"}'
@@ -238,7 +238,7 @@ curl -X POST https://qonto-technical-test.fly.dev/parse-int -H "Content-Type: ap
 }
 ```
 
-**curl:**
+**example:**
 
 ```bash
 curl -X POST https://qonto-technical-test.fly.dev/was-student-during -H "Content-Type: application/json" -d '{"student": {"college": "cambridge", "year": 2004}, "college": "cambridge", "startYear": 2002, "endYear": 2006}'
