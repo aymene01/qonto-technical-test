@@ -148,6 +148,7 @@ curl -X POST https://qonto-technical-test.fly.dev/is-student-of -H "Content-Type
 ## Generate Even Int List
 
 **Endpoint:** `POST /generate-even-int-list`
+
 **Description:** Generates a list of even integers from 0 to n inclusive.
 
 **Request:**
