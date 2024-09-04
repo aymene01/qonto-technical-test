@@ -6,12 +6,19 @@
 </p>
 
 <p align="center">
-  <strong>Final Submission for Backend Engineer Intern Technical Test</strong>
+  <strong style="font-size: 24px;">Final Submission for Backend Engineer Intern Technical Test</strong>
   <br />
-  <em>By Aymene, currently working at Veepee</em>
+  <em>By Aymene Bousbia, currently working at Veepee</em>
   <br />
   <br />
 </p>
+
+<div align="center">
+  <p>
+    <a href="https://github.com/aymene01/qonto-technical-test/issues"><img src="https://img.shields.io/github/issues/aymene01/qonto-technical-test.svg" alt="GitHub Issues"></a>
+    <a href="https://golang.org/"><img src="https://img.shields.io/badge/built%20with-Go-00ADD8.svg" alt="Built with Go"></a>
+  </p>
+</div>
 
 # Qonto Technical Test - Backend Engineer Intern
 
@@ -48,17 +55,17 @@ This project includes:
 }
 ```
 
-**curl:**
+**exemple:**
 
 ```bash
 curl -X GET https://qonto-technical-test.fly.dev/health
 ```
 
-### 2. Functions
+## 2. Functions
 
 The application exposes the following functions:
 
-## Count Frequency
+### Count Frequency
 
 **Endpoint:** `POST /count-frequency`
 
@@ -87,11 +94,12 @@ The application exposes the following functions:
 curl -X POST https://qonto-technical-test.fly.dev/count-frequency -H "Content-Type: application/json" -d '["egg", "egg", "soap", "soap", "soap"]'
 ```
 
-## Is Truthy
+### Is Truthy
 
 **Endpoint:** `POST /is-truthy`
 
 **Description:** Determines if any of its arguments is true
+
 **Request:**
 
 ```json
@@ -114,9 +122,10 @@ curl -X POST https://qonto-technical-test.fly.dev/count-frequency -H "Content-Ty
 curl -X POST https://qonto-technical-test.fly.dev/is-truthy -H "Content-Type: application/json" -d '[true, false]'
 ```
 
-## Is Student Of
+### Is Student Of
 
 **Endpoint:** `POST /is-student-of`
+
 **Description:** Returns true if a student attended a specified college.
 
 **Request:**
@@ -145,7 +154,7 @@ curl -X POST https://qonto-technical-test.fly.dev/is-truthy -H "Content-Type: ap
 curl -X POST https://qonto-technical-test.fly.dev/is-student-of -H "Content-Type: application/json" -d '{"obj": {"college": "cambridge", "year": 2008}, "college": "cambridge"}'
 ```
 
-## Generate Even Int List
+### Generate Even Int List
 
 **Endpoint:** `POST /generate-even-int-list`
 
@@ -173,9 +182,10 @@ curl -X POST https://qonto-technical-test.fly.dev/is-student-of -H "Content-Type
 curl -X POST https://qonto-technical-test.fly.dev/generate-even-int-list -H "Content-Type: application/json" -d '{"n": 7}'
 ```
 
-## Parse Int
+### Parse Int
 
 **Endpoint:** `POST /parse-int`
+
 **Description:** Parses an integer from a string.
 
 **Request:**
@@ -203,6 +213,7 @@ curl -X POST https://qonto-technical-test.fly.dev/parse-int -H "Content-Type: ap
 ## Was Student During
 
 **Endpoint:** `POST /was-student-during`
+
 **Description:** Determines if a student was attending college during a specific year.
 
 **Request:**
