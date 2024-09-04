@@ -54,6 +54,12 @@ This project includes:
 curl -X GET https://qonto-technical-test.fly.dev/health
 ```
 
+### 2. Functions
+
+The application exposes the following functions:
+
+## Count Frequency
+
 **Endpoint:** `POST /count-frequency`
 
 **Description:** Counts how many times each item occurs in a list.
@@ -81,6 +87,8 @@ curl -X GET https://qonto-technical-test.fly.dev/health
 curl -X POST https://qonto-technical-test.fly.dev/count-frequency -H "Content-Type: application/json" -d '["egg", "egg", "soap", "soap", "soap"]'
 ```
 
+## Is Truthy
+
 **Endpoint:** `POST /is-truthy`
 
 **Description:** Determines if any of its arguments is true
@@ -105,6 +113,8 @@ curl -X POST https://qonto-technical-test.fly.dev/count-frequency -H "Content-Ty
 ```bash
 curl -X POST https://qonto-technical-test.fly.dev/is-truthy -H "Content-Type: application/json" -d '[true, false]'
 ```
+
+## Is Student Of
 
 **Endpoint:** `POST /is-student-of`
 **Description:** Returns true if a student attended a specified college.
@@ -135,6 +145,8 @@ curl -X POST https://qonto-technical-test.fly.dev/is-truthy -H "Content-Type: ap
 curl -X POST https://qonto-technical-test.fly.dev/is-student-of -H "Content-Type: application/json" -d '{"obj": {"college": "cambridge", "year": 2008}, "college": "cambridge"}'
 ```
 
+## Generate Even Int List
+
 **Endpoint:** `POST /generate-even-int-list`
 **Description:** Generates a list of even integers from 0 to n inclusive.
 
@@ -160,6 +172,8 @@ curl -X POST https://qonto-technical-test.fly.dev/is-student-of -H "Content-Type
 curl -X POST https://qonto-technical-test.fly.dev/generate-even-int-list -H "Content-Type: application/json" -d '{"n": 7}'
 ```
 
+## Parse Int
+
 **Endpoint:** `POST /parse-int`
 **Description:** Parses an integer from a string.
 
@@ -184,6 +198,8 @@ curl -X POST https://qonto-technical-test.fly.dev/generate-even-int-list -H "Con
 ```bash
 curl -X POST https://qonto-technical-test.fly.dev/parse-int -H "Content-Type: application/json" -d '{"value": "10"}'
 ```
+
+## Was Student During
 
 **Endpoint:** `POST /was-student-during`
 **Description:** Determines if a student was attending college during a specific year.
