@@ -34,10 +34,10 @@ I’ve implemented a series of backend functions and exposed them via RESTful en
 
 This project includes:
 
-- **Dockerized Environment:** The application runs in a containerized environment using Docker.
+- **Functions:** Contains all the functions required to solve the given exercises.
 - **Unit Testing:** Comprehensive unit tests to ensure the correctness of each function.
+- **Dockerized Environment:** The application runs in a containerized environment using Docker.
 - **CI/CD Pipeline:** Continuous Integration and Continuous Deployment are handled via GitHub Actions.
-- **Monitoring:** A Grafana dashboard is set up for monitoring the application.
 
 ## Endpoints
 
