@@ -17,7 +17,7 @@ func TestParseInt(t *testing.T) {
 		{"-456", -456, false},
 		{"42abc", 0, true},
 		{"", 0, true},
-		{"99999999999999999999", 0, true}, // out of range
+		{"99999999999999999999", 0, true},
 	}
 
 	for _, test := range tests {

@@ -25,8 +25,8 @@ func (e *Exercice) CountFrequencyHandler(w http.ResponseWriter, r *http.Request)
 // -> 
 func (e *Exercice) IsStudentOfHandler(w http.ResponseWriter, r *http.Request) {
 	var input struct {
-		Student     f.Student `json:"obj"`
-		College string `json:"college"`
+		Student f.Student `json:"obj"`
+		College string    `json:"college"`
 	}
 	if err := json.NewDecoder(r.Body).Decode(&input); err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
@@ -90,10 +90,10 @@ func (e *Exercice) ParseIntHandler(w http.ResponseWriter, r *http.Request) {
 
 func (e *Exercice) WasStudentDuringHandler(w http.ResponseWriter, r *http.Request) {
 	var input struct {
-		Student f.Student `json:"student"`
-		College string `json:"college"`
-		StartYear int `json:"startYear"`
-		EndYear int `json:"endYear"`
+		Student   f.Student `json:"student"`
+		College   string    `json:"college"`
+		StartYear int       `json:"startYear"`
+		EndYear   int       `json:"endYear"`
 	}
 
 	if err := json.NewDecoder(r.Body).Decode(&input); err != nil {

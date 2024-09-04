@@ -9,7 +9,7 @@ import (
 func TestIsStudentOf(t *testing.T) {
 	tests := []struct {
 		name    string
-		student     f.Student
+		student f.Student
 		college string
 		want    bool
 	}{

@@ -3,7 +3,7 @@ package test
 import (
 	"testing"
 
-	f "github.com/aymene01/qonto-technical-test/internal/functions"
+	"github.com/aymene01/qonto-technical-test/internal/functions"
 )
 
 func TestIsTruthy(t *testing.T) {
@@ -21,7 +21,7 @@ func TestIsTruthy(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := f.IsTruthy(tt.arr); got != tt.want {
+			if got := functions.IsTruthy(tt.arr); got != tt.want {
 				t.Errorf("isTruthy() = %v, want %v", got, tt.want)
 			}
 		})

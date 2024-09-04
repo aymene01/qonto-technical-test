@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	f "github.com/aymene01/qonto-technical-test/internal/functions"
+	"github.com/aymene01/qonto-technical-test/internal/functions"
 )
 
 func TestCountFrequency(t *testing.T) {
@@ -36,7 +36,7 @@ func TestCountFrequency(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run("", func(t *testing.T) {
-			actual := f.CountFrequency(tt.input)
+			actual := functions.CountFrequency(tt.input)
 			if !reflect.DeepEqual(actual, tt.expected) {
 				t.Errorf("got %v, want %v", actual, tt.expected)
 			}
