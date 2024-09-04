@@ -244,6 +244,10 @@ curl -X POST https://qonto-technical-test.fly.dev/parse-int -H "Content-Type: ap
 curl -X POST https://qonto-technical-test.fly.dev/was-student-during -H "Content-Type: application/json" -d '{"student": {"college": "cambridge", "year": 2004}, "college": "cambridge", "startYear": 2002, "endYear": 2006}'
 ```
 
+## Additional Documentation
+
+For a detailed breakdown of the DoSomething function, including its operations and how it can be renamed to better reflect its purpose, please refer to link [DoSomething](./DoSomething.md)
+
 ## 👤 Author
 
 **Aymene Bousbia**
